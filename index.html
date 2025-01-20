@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudoku</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Micro+5&family=Tiny5&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <h1>
+        SUDOKU
+    </h1>
+    <div id="gameBox">
+        <div id="box1" class="box">
+            <div id="cell1" class="cell"></div>
+            <div id="cell2" class="cell" data-fixed>8</div>
+            <div id="cell3" class="cell"></div>
+            <div id="cell10" class="cell"></div>
+            <div id="cell11" class="cell"></div>
+            <div id="cell12" class="cell"></div>
+            <div id="cell19" class="cell" data-fixed>9</div>
+            <div id="cell20" class="cell"></div>
+            <div id="cell21" class="cell" data-fixed>3</div>
+        </div>
+        <div id="box2" class="box">
+            <div id="cell4" class="cell"></div>
+            <div id="cell5" class="cell"></div>
+            <div id="cell6" class="cell" data-fixed>5</div>
+            <div id="cell13" class="cell" data-fixed>2</div>
+            <div id="cell14" class="cell"></div>
+            <div id="cell15" class="cell" data-fixed>6</div>
+            <div id="cell22" class="cell"></div>
+            <div id="cell23" class="cell"></div>
+            <div id="cell24" class="cell"></div>
+        </div>
+        <div id="box3" class="box">
+            <div id="cell7" class="cell" data-fixed>1</div>
+            <div id="cell8" class="cell" data-fixed>7</div>
+            <div id="cell9" class="cell" data-fixed>9</div>
+            <div id="cell16" class="cell"></div>
+            <div id="cell17" class="cell" data-fixed>8</div>
+            <div id="cell18" class="cell" data-fixed>4</div>
+            <div id="cell25" class="cell" data-fixed>6</div>
+            <div id="cell26" class="cell"></div>
+            <div id="cell27" class="cell"></div>
+        </div>
+        <div id="box4" class="box">
+            <div id="cell28" class="cell" data-fixed>2</div>
+            <div id="cell29" class="cell" data-fixed>7</div>
+            <div id="cell30" class="cell"></div>
+            <div id="cell37" class="cell" data-fixed>4</div>
+            <div id="cell38" class="cell"></div>
+            <div id="cell39" class="cell"></div>
+            <div id="cell46" class="cell"></div>
+            <div id="cell47" class="cell"></div>
+            <div id="cell48" class="cell" data-fixed>8</div>
+        </div>
+        <div id="box5" class="box">
+            <div id="cell31" class="cell"></div>
+            <div id="cell32" class="cell" data-fixed>8</div>
+            <div id="cell33" class="cell"></div>
+            <div id="cell40" class="cell"></div>
+            <div id="cell41" class="cell" data-fixed>5</div>
+            <div id="cell42" class="cell"></div>
+            <div id="cell49" class="cell"></div>
+            <div id="cell50" class="cell" data-fixed>4</div>
+            <div id="cell51" class="cell" data-fixed>2</div>
+        </div>
+        <div id="box6" class="box">
+            <div id="cell34" class="cell"data-fixed>5</div>
+            <div id="cell35" class="cell"></div>
+            <div id="cell36" class="cell" data-fixed>3</div>
+            <div id="cell43" class="cell" data-fixed>8</div>
+            <div id="cell44" class="cell" data-fixed>1</div>
+            <div id="cell45" class="cell" data-fixed>2</div>
+            <div id="cell52" class="cell"></div>
+            <div id="cell53" class="cell"></div>
+            <div id="cell54" class="cell" data-fixed>7</div>
+        </div>
+        <div id="box7" class="box">
+            <div id="cell55" class="cell" data-fixed>8</div>
+            <div id="cell56" class="cell"></div>
+            <div id="cell57" class="cell"></div>
+            <div id="cell64" class="cell" data-fixed>3</div>
+            <div id="cell65" class="cell"data-fixed>5</div>
+            <div id="cell66" class="cell" data-fixed>4</div>
+            <div id="cell73" class="cell"></div>
+            <div id="cell74" class="cell" data-fixed>9</div>
+            <div id="cell75" class="cell" data-fixed>6</div>
+        </div>
+        <div id="box8" class="box">
+            <div id="cell58" class="cell"></div>
+            <div id="cell59" class="cell"></div>
+            <div id="cell60" class="cell" data-fixed>3</div>
+            <div id="cell67" class="cell"></div>
+            <div id="cell68" class="cell" data-fixed>1</div>
+            <div id="cell69" class="cell"></div>
+            <div id="cell76" class="cell"></div>
+            <div id="cell77" class="cell" data-fixed>2</div>
+            <div id="cell78" class="cell" data-fixed>4</div>
+        </div>
+        <div id="box9" class="box">
+            <div id="cell61" class="cell"></div>
+            <div id="cell62" class="cell"></div>
+            <div id="cell63" class="cell" data-fixed>1</div>
+            <div id="cell70" class="cell"></div>
+            <div id="cell71" class="cell" data-fixed>9</div>
+            <div id="cell72" class="cell"></div>
+            <div id="cell79" class="cell" data-fixed>7</div>
+            <div id="cell80" class="cell"></div>
+            <div id="cell81" class="cell"></div>
+        </div>
+
+    </div>
+    <div id="options">
+        
+        <div id="opt2">1</div>
+        <div id="opt3">2</div>
+        <div id="opt4">3</div>
+        <div id="opt5">4</div>
+        <div id="opt6">5</div>
+        <div id="opt7">6</div>
+        <div id="opt8">7</div>
+        <div id="opt9">8</div>
+        <div id="opt10">9</div>
+        <div id="cut">&#9003</div>
+        <div id="restartGame">Restart</div>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
